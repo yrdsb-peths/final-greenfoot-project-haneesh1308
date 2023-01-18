@@ -20,7 +20,11 @@ public class MyWorld extends World
         GreenAlien greenAlien = new GreenAlien();
         addObject(greenAlien, 200, 100);
         BlueAlien blueAlien = new BlueAlien();
-        addObject(blueAlien, 200, 100);
+        addObject(blueAlien, 400, 250);
+        RedAlien redAlien = new RedAlien();
+        addObject(redAlien, 150, 270);
+        YellowAlien yellowAlien = new YellowAlien();
+        addObject(yellowAlien, 420, 100);
     }
 }
 

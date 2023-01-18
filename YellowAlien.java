@@ -1,35 +1,36 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GreenAlien here.
+ * Write a description of class YellowAlien here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GreenAlien extends Actor
+public class YellowAlien extends Actor
 {
     GreenfootImage[] animation = new GreenfootImage[4];
     SimpleTimer animationTimer = new SimpleTimer();
     private int xSpeed = 3;
     private int ySpeed = 3;
     /**
-     * Act - do whatever the GreenAlien wants to do. This method is called whenever
+     * Act - do whatever the YellowAlien wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public GreenAlien()
+    public YellowAlien()
     {
         for(int i = 0; i < animation.length; i++)
         {
-            animation[i] = new GreenfootImage("images/Green_Alien/Alien" + i +".png");
-            animation[i].scale(100, 100);
+            animation[i] = new GreenfootImage("images/Yellow_Alien/Alien" + i +".png");
+            animation[i].scale(160, 160);
         }
         animationTimer.mark();
         setImage(animation[0]);
     }
     public void act()
     {
-        animateGreenAlien();
+        animateYellowAlien();
         setLocation(getX() + xSpeed, getY() + ySpeed);
+        
         if(getY() > 380)
         {
             ySpeed = ySpeed *-1;
@@ -49,10 +50,9 @@ public class GreenAlien extends Actor
         {
             xSpeed = xSpeed *-1;
         }
-    
     }
     int imageIndex = 0;
-    public void animateGreenAlien()
+    public void animateYellowAlien()
     {
         if(animationTimer.millisElapsed() < 125)
         {
