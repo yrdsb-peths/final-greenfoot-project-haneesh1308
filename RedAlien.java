@@ -50,6 +50,15 @@ public class RedAlien extends Actor
         {
             xSpeed = xSpeed *-1;
         }
+        
+        MyWorld world = (MyWorld) getWorld();
+        if (Greenfoot.mouseClicked(this))
+        {
+            getWorld().removeObject(this);
+            world.GameOver();
+            Greenfoot.stop();
+        }
+        
     }
     int imageIndex = 0;
     public void animateRedAlien()

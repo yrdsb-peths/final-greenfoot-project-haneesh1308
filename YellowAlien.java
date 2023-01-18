@@ -50,6 +50,11 @@ public class YellowAlien extends Actor
         {
             xSpeed = xSpeed *-1;
         }
+        
+        if (Greenfoot.mouseClicked(this))
+        {
+            getWorld().removeObject(this);
+        }
     }
     int imageIndex = 0;
     public void animateYellowAlien()

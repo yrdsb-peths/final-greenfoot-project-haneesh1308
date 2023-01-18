@@ -49,7 +49,13 @@ public class GreenAlien extends Actor
         {
             xSpeed = xSpeed *-1;
         }
-    
+        
+        if (Greenfoot.mouseClicked(this))
+        {
+            getWorld().removeObject(this);
+            MyWorld world = (MyWorld) getWorld();
+            world.increaseScore();
+        }
     }
     int imageIndex = 0;
     public void animateGreenAlien()
@@ -62,4 +68,6 @@ public class GreenAlien extends Actor
         setImage(animation[imageIndex]);
         imageIndex = (imageIndex + 1) % animation.length;
     }
+    
+    
 }
