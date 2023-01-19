@@ -10,13 +10,16 @@ public class GreenAlien extends Actor
 {
     GreenfootImage[] animation = new GreenfootImage[4];
     SimpleTimer animationTimer = new SimpleTimer();
+    int x = 0;
+    int y = 0;
     private int xSpeed = 3;
     private int ySpeed = 3;
+    int imageIndex = 0;
     /**
      * Act - do whatever the GreenAlien wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public GreenAlien()
+    public GreenAlien(int x, int y)
     {
         for(int i = 0; i < animation.length; i++)
         {
@@ -25,7 +28,10 @@ public class GreenAlien extends Actor
         }
         animationTimer.mark();
         setImage(animation[0]);
+        this.x = x;
+        this.y = y;
     }
+    int speed = 1;
     public void act()
     {
         animateGreenAlien();
@@ -50,14 +56,18 @@ public class GreenAlien extends Actor
             xSpeed = xSpeed *-1;
         }
         
-        if (Greenfoot.mouseClicked(this))
+        if(Greenfoot.mouseClicked(this))
         {
-            getWorld().removeObject(this);
             MyWorld world = (MyWorld) getWorld();
             world.increaseScore();
+            setLocation(this.x, this.y);
         }
     }
-    int imageIndex = 0;
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
+    }
     public void animateGreenAlien()
     {
         if(animationTimer.millisElapsed() < 125)

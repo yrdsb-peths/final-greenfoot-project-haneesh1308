@@ -42,11 +42,11 @@ public class TitleScreen extends World
         label2.setLocation(294,189);
         Label label3 = new Label("Alien Attack" , 80);
         addObject(label3, getWidth()/2, 70);
-        BlueAlien blueAlien = new BlueAlien();
+        BlueAlien blueAlien = new BlueAlien(400, 250);
         addObject(blueAlien,106,276);
         blueAlien.setLocation(110,275);
         blueAlien.setLocation(116,274);
-        GreenAlien greenAlien = new GreenAlien();
+        GreenAlien greenAlien = new GreenAlien(200, 100);
         addObject(greenAlien,112,362);
         greenAlien.setLocation(124,355);
         RedAlien redAlien = new RedAlien();
@@ -55,7 +55,7 @@ public class TitleScreen extends World
         blueAlien.setLocation(90,271);
         greenAlien.setLocation(85,357);
         redAlien.setLocation(352,265);
-        YellowAlien yellowAlien = new YellowAlien();
+        YellowAlien yellowAlien = new YellowAlien(420, 100);
         addObject(yellowAlien,363,361);
         yellowAlien.setLocation(363,367);
         yellowAlien.setLocation(349,359);
