@@ -66,7 +66,8 @@ public class GreenAlien extends Actor
     
     public void setSpeed(int spd)
     {
-        speed = spd;
+        xSpeed = spd;
+        ySpeed = spd;
     }
     public void animateGreenAlien()
     {

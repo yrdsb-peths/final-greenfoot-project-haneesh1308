@@ -63,6 +63,12 @@ public class YellowAlien extends Actor
             setLocation(this.x, this.y);
         }
     }
+    
+    public void setSpeed(int spd)
+    {
+        xSpeed = spd;
+        ySpeed = spd;
+    }
     public void animateYellowAlien()
     {
         if(animationTimer.millisElapsed() < 125)

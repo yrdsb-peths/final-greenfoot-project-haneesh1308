@@ -11,6 +11,10 @@ public class MyWorld extends World
     public int score = 0;
     Label scoreLabel;
     int level = 1;
+    GreenAlien greenAlien = new GreenAlien(200, 100);
+    BlueAlien blueAlien = new BlueAlien(400, 250);
+    YellowAlien yellowAlien = new YellowAlien(420, 100);
+    RedAlien redAlien = new RedAlien();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -20,13 +24,9 @@ public class MyWorld extends World
         super(600, 400, 1, false);
         Pointer pointer = new Pointer();
         addObject(pointer, -10, -10);
-        GreenAlien greenAlien = new GreenAlien(200, 100);
         addObject(greenAlien, 200, 100);
-        BlueAlien blueAlien = new BlueAlien(400, 250);
         addObject(blueAlien, 400, 250);
-        RedAlien redAlien = new RedAlien();
         addObject(redAlien, 150, 270);
-        YellowAlien yellowAlien = new YellowAlien(420, 100);
         addObject(yellowAlien, 420, 100);
             
         scoreLabel = new Label(0, 80);
@@ -40,7 +40,11 @@ public class MyWorld extends World
         
         if(score % 10 == 0)
         {
-            level += 1;
+            level += 2;
+            greenAlien.setSpeed(level);
+            blueAlien.setSpeed(level);
+            yellowAlien.setSpeed(level);
+            redAlien.setSpeed(level);
         }
     }
     

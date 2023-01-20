@@ -63,6 +63,12 @@ public class BlueAlien extends Actor
             setLocation(this.x, this.y);
         }
     }
+    
+    public void setSpeed(int spd)
+    {
+        xSpeed = spd;
+        ySpeed = spd;
+    }
     public void animateBlueAlien()
     {
         if(animationTimer.millisElapsed() < 125)

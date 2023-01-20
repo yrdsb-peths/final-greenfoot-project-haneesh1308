@@ -60,6 +60,11 @@ public class RedAlien extends Actor
         }
         
     }
+    public void setSpeed(int spd)
+    {
+        xSpeed = spd;
+        ySpeed = spd;
+    }
     int imageIndex = 0;
     public void animateRedAlien()
     {
