@@ -54,7 +54,7 @@ public class RedAlien extends Actor
         MyWorld world = (MyWorld) getWorld();
         if (Greenfoot.mouseClicked(this))
         {
-            getWorld().removeObject(this);
+            world.removeObject(this);
             world.GameOver();
             Greenfoot.stop();
         }

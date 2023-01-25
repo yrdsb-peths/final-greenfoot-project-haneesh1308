@@ -54,6 +54,16 @@ public class MyWorld extends World
         addObject(gameOverLabel, 300, 200);
     }
     
+    public void act()
+    {
+        if (Greenfoot.mouseClicked(redAlien))
+        {
+            removeObject(yellowAlien);
+            removeObject(greenAlien);
+            removeObject(blueAlien);
+            removeObject(scoreLabel);
+        }
+    }
     
 }
 

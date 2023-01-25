@@ -62,6 +62,8 @@ public class GreenAlien extends Actor
             world.increaseScore();
             setLocation(this.x, this.y);
         }
+        
+
     }
     
     public void setSpeed(int spd)
