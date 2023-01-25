@@ -62,6 +62,9 @@ public class YellowAlien extends Actor
             world.increaseScore();
             setLocation(this.x, this.y);
         }
+        
+        
+        
     }
     
     public void setSpeed(int spd)

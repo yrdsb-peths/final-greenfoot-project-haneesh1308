@@ -62,6 +62,7 @@ public class BlueAlien extends Actor
             world.increaseScore();
             setLocation(this.x, this.y);
         }
+        
     }
     
     public void setSpeed(int spd)
